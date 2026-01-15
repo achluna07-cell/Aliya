@@ -1,85 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color: rgb(198, 237, 255);
+
+body {
+  background-color: rgb(198, 237, 255);
 }
-.bawah{
+
+/* SECTION ATAS */
+.bawah {
   margin-top: 35px;
-
-
   display: flex;
-  flex-direction: column;   /* ini untuk arah tulisannya ke atas ke bawah */
-  align-items: center;      /* tombol ke tengah */
-
-
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-
-.tulisan{
+/* JUDUL */
+.tulisan {
   font-size: 15px;
   color: #857650;
   margin-bottom: 15px;
 }
 
-
-.song{
-  background: none;
-  border: none;
+/* GAMBAR LAGU */
+.song {
   cursor: pointer;
 }
 
-
-.song img{
-  width: 320px;
-  height: 320px;
-  transition: .3s;
+.song img {
+  width: 80%;
+  max-width: 320px;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.song img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
-.song img:hover{
-  transform: scale(1.10);
-  opacity: 0.8;
+/* TEKS UCAPAN */
+.wish {
+  font-size: 16px;
+  color: #c499af;
+  max-width: 800px;
+  padding: 0 20px;
+  margin-top: 15px;
 }
-.wish{
-    font-size: 16px;
-    color:#c499af;
-    margin-left: 130px;
-    margin-right: 130px;
+
+.wish1 {
+  font-size: 10px;
+  max-width: 800px;
+  padding: 0 20px;
+  margin-top: 10px;
 }
-.wish1{
-    font-size: 10px;
-    margin-left: 130px;
-    margin-right: 130px;
-}
-.flowerlily{
-    background-color: #857650;
-    border: #857650;
-    border-radius: 5px;
-    color: white;
-    margin-top: 50px;
-    transition: .3s;
-}
-.flowerlily:hover{
-  transform: scale(1.10);
-  opacity: 0.8;
-}
-.lily{
+
+/* SECTION LILY */
+.lily {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;      /* tengah horizontal */
-  justify-content: center;  /* tengah vertikal */
+  align-items: center;
+  justify-content: center;
 }
+
+/* TOMBOL */
+.flowerlily {
+  background-color: #857650;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  margin-top: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.flowerlily:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* LILY ANIMASI */
 #lilyy {
+  display: block;
+  margin-top: 20px;
+  width: 200px;
+  max-width: 80%;
   opacity: 0;
-  transform: scale(0);
-  transition: 1s ease;
+  transform: scale(0.5);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
 }
 
 #lilyy.muncul {
@@ -87,12 +104,11 @@ body{
   transform: scale(1);
 }
 
-footer{
+/* FOOTER */
+footer {
+  margin-top: 40px;
   font-size: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;      /* tengah horizontal */
-  justify-content: center;  /* tengah vertikal */
+  justify-content: center;
+  align-items: center;
 }
-
-
