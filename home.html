@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <section class="bawah">
+    <p class="tulisan">Selamat Ulang Tahun yang ke- 19!!</p>
+    <div class="song">
+    <img src="nyala.png" alt="gambar" id="gambar">
+    </div>
+    <p class="wish">Selamat ulang tahun yang ke- 19!!! 1 tahun lagi meunuju kepala dua ya nak ya, tp egk pp kita nikmati aja usia 19 tahun ini. Aku berdoa yang terbaik buat kamu, selalu. Makasih yah udah ada di sela stres nya diri aku ini. Mungkin aku bukan temen terbaik yang pernah kamu punya, tapi bagi aku, kamu salah satu temen terbaik yang aku punya. Aku enggak bisa kaya hoki yang ngajakin kamu mainn seminggu 10 kali, atau depi yang bisa kamu tongkrongin kos nya. Tp aku bisa jadi luna yang gaada di luna lainnya (gua bidadari). Kita udah temenan hampir 7 tahun, aku harap aku salah satu orang yang bikin kamu punya memori baik ya nak. Aku sengaja kirim di email jaga jaga klo hafid ga ngirim kamu email (gua backup). Enggak sih, sebenernya aku kirim di email biar link ini gampang kamu buka dan ga perlu scroll chat . Semoga usia kamu yang ke- 19 tahun ini kamu bisa nemuin pria ganteng ya dik, yang clean outfit. Yang gaperlu bikin kamu ngeluarin uang, ngerasa bersalah, dan yang bikin kamu gaperlu khawatir soalnya dia ga friendly dan gaada riwayat gamon mantan dan gaada riwayat selingkuh. Semoga juga nilai kamu semester 2 ini ip nya 4 dan survive organisasi manapun, mau itu bem atau hima. Tumbuh yang tinggi ya nak, barangkali kamu di dpr bagian membantu mereka menghitung (mereka kan janggal). Aku minta maaf yah karena belum bisa jadi teman yang baik. Sekali lagi selamat ulang tahun yang ke- 19. Kamu harus hidup lebih lama dari aku, jadi semoga panjang umur, sehat selalu, dan bahagia selalu. Aamiin.</p>
+    <p class="wish1">lagunya agak romantis deh, egk papa ya nak. Yang penting reffnya kan.</p>
+  </section>
+  <section class="lily">
+    <div class="flower"> 
+        <button class="flowerlily" id="btnLiloy"> Pencet sini </button>
+    </div>
+    <div class="lilyy">
+        <img src="lily.png" alt="gambar" id="lilyy">
+    </div>
+  </section>
+  <audio id="mySong">
+    <source src="song.mpeg" type="audio/mpeg">
+  </audio>
+
+<script>
+  var mySong = document.getElementById("mySong");
+  var gambar = document.getElementById("gambar")
+  var bunga = document.getElementById("lilyy")
+  var tombol = document.getElementById("btnLiloy")
+  gambar.onclick = function(){
+    if(mySong.paused){
+      mySong.play();
+      gambar.src="mati.png"
+    } else {
+      mySong.pause();
+      gambar.src="nyala.png"
+    }
+  }
+   tombol.onclick = function(){
+    bunga.classList.add("muncul");
+    tombol.style.display = "none";
+   }
+</script>
+</body>
+<footer>
+    <p>Maaf enggak yang asli</p>
+</footer>
+
+
+</html>
