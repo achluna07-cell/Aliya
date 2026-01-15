@@ -29,29 +29,37 @@
   </audio>
 
 <script>
-  var mySong = document.getElementById("mySong");
-  var gambar = document.getElementById("gambar")
-  var bunga = document.getElementById("lilyy")
-  var tombol = document.getElementById("btnLiloy")
-  gambar.onclick = function(){
-    if(mySong.paused){
+  const mySong = document.getElementById("mySong");
+  const gambar = document.getElementById("gambar");
+  const bunga = document.getElementById("lilyy");
+  const tombol = document.getElementById("btnLiloy");
+
+  gambar.onclick = function () {
+    if (mySong.paused) {
       mySong.play();
-      gambar.src="mati.png"
+      gambar.src = "mati.png";
     } else {
       mySong.pause();
-      gambar.src="nyala.png"
+      gambar.src = "nyala.png";
     }
-  }
-   tombol.onclick = function(){
-    bunga.classList.add("muncul");
+  };
+
+  tombol.onclick = function () {
+    // paksa browser render state awal
+
+    requestAnimationFrame(() => {
+      bunga.classList.add("muncul");
+    });
+
     tombol.style.display = "none";
-   }
+  };
 </script>
-</body>
 <footer>
-    <p>Maaf enggak yang asli</p>
+  <p>Maaf enggak yang asli</p>
 </footer>
+</body>
 
 
 </html>
+
 
